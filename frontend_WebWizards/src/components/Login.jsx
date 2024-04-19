@@ -25,7 +25,7 @@ function Login() {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('/v1/user/login',
+            const response = await axios.post('https://care-connect-jade.vercel.app/api/v1/user/login',
                 JSON.stringify({ email, password }),
                 {
                     headers: { 'Content-Type': 'application/json' },

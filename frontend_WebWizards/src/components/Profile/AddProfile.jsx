@@ -31,7 +31,7 @@ function AddProfile() {
     const handleSubmit = async (e) => {
         try {
             e.preventDefault()
-            const res = await axios.post("/v1/profile/",
+            const res = await axios.post("https://care-connect-jade.vercel.app/api/v1/profile/",
                 {
                     firstName,
                     middleName,

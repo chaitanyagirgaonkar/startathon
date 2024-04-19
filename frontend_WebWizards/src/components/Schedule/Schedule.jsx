@@ -11,7 +11,7 @@ function Schedule() {
     }
 
     useEffect(() => {
-        axios.get(`/v1/schedule/getUserSchedule`)
+        axios.get(`https://care-connect-jade.vercel.app/api/v1/schedule/getUserSchedule`)
             .then((res) => {
                 console.log(res.data.data)
                 setData(res.data.data)

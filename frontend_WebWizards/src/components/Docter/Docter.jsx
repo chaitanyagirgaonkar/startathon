@@ -23,7 +23,7 @@ const Docter = () => {
   };
   useEffect(() => {
 
-    axios.get(`/v1/report/user/${userId}`)
+    axios.get(`https://care-connect-jade.vercel.app/api/v1/report/user/${userId}`)
       .then((response) => {
         setData(response.data.data.userBelongingToReport[0])
         console.log(response.data.data.patientReport);

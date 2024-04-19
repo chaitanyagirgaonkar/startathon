@@ -15,7 +15,7 @@ function ViewReport({ reportId, onHandleViewNote }) {
 
 
     useEffect(() => {
-        axios.get(`/v1/report/${reportId}`)
+        axios.get(`https://care-connect-jade.vercel.app/api/v1/report/${reportId}`)
             .then((res) => {
                 console.log(res.data.data)
                 setReport(res.data.data)

@@ -24,7 +24,7 @@ const SingleDocter = () => {
   };
   useEffect(() => {
 
-    axios.get(`/v1/report/report/${reportId}`)
+    axios.get(`https://care-connect-jade.vercel.app/api/v1/report/report/${reportId}`)
       .then((response) => {
         setData(response.data.data.profile[0])
         console.log(response.data.data.profile[0])

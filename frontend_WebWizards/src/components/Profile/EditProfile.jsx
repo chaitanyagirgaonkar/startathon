@@ -30,7 +30,7 @@ function EditProfile({ pdfDetails, pdfId }) {
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            const response = await axios.patch(`/v1/profile/${pdfId}`,
+            const response = await axios.patch(`https://care-connect-jade.vercel.app/api/v1/profile/${pdfId}`,
                 {
                     firstName,
                     middleName,

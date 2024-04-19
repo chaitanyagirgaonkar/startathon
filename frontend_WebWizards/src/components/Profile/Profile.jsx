@@ -20,7 +20,7 @@ function Profile() {
 
     useEffect(() => {
   
-        axios.get("/v1/profile/getProfile")
+        axios.get("https://care-connect-jade.vercel.app/api/v1/profile/getProfile")
             .then((res) => {
                 console.log(res.data);
                 setData(res.data.data)

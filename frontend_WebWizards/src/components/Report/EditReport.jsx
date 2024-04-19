@@ -18,7 +18,7 @@ function EditReport({ reportDetails, onCancelEdit, onUpdateReport }) {
         formData.append('pdfFile', pdfFile);
 
         try {
-            const res = await axios.patch(`/v1/report/${reportDetails?._id}`, formData, {
+            const res = await axios.patch(`https://care-connect-jade.vercel.app/api/v1/report/${reportDetails?._id}`, formData, {
                 headers: { 'Content-Type': 'multipart/form-data' },
             });
             console.log(res.data.data);

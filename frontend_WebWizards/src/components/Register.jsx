@@ -39,7 +39,7 @@ function Register() {
             return;
         }
         try {
-            const response = await axios.post('/v1/user/register',
+            const response = await axios.post('https://care-connect-jade.vercel.app/api/v1/user/register',
                 JSON.stringify({ fullName: fullName, email, password: pwd }),
                 {
                     headers: {

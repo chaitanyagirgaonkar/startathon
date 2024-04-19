@@ -20,7 +20,7 @@ function AddReport({ onPdfAdded }) {
         formData.append("reportType", reportDate)
         formData.append("pdfFile", pdfFile)
         try {
-            const res = await axios.post("/v1/report/create", formData,
+            const res = await axios.post("https://care-connect-jade.vercel.app/api/v1/report/create", formData,
                 {
                     headers: { "Content-Type": "multipart/form-data" }
                 })

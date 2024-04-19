@@ -8,7 +8,7 @@ const useLogout = () => {
     const logout = async () => {
         setAuth({})
         try {
-            const response = await axios.post('/v1/user/logout', {
+            const response = await axios.post('https://care-connect-jade.vercel.app/api/v1/user/logout', {
                 withCredentials: true
             })
         } catch (err) {
