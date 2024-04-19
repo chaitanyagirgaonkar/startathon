@@ -3,9 +3,12 @@ import { FaEdit, FaEye, FaFilePdf } from 'react-icons/fa';
 import { useEffect, useState } from 'react';
 import AddProfileCom from "./AddProfile";
 import useAuth from "../../hooks/useAuth.js"
-import axios from "axios"
+// import axios from "axios"
+import axios from "../../api/axios.js"
 import EditProfile from "./EditProfile";
 import { jwtDecode } from "jwt-decode"
+import { axiosPrivate } from "../../api/axios.js";
+
 function Profile() {
 
     const { editProfile, setEditProfile, profile, profileData, addProfile, setAddProfile, auth } = useAuth()
@@ -20,7 +23,10 @@ function Profile() {
 
     useEffect(() => {
   
-        axios.get("https://care-connect-jade.vercel.app/api/v1/profile/getProfile")
+        axiosPrivate.get("https://care-connect-jade.vercel.app/api/v1/profile/getProfile",{
+            headers: { "Content-Type": "application/json" },
+    withCredentials: true
+        })
             .then((res) => {
                 console.log(res.data);
                 setData(res.data.data)
