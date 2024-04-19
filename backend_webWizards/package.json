@@ -5,7 +5,7 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon -r dotenv/config --experimental-json-modules src/server.js"
+    "start": "nodemon -r dotenv/config --experimental-json-modules src/server.js"
   },
   "author": "Shyam Kolge",
   "license": "ISC",
