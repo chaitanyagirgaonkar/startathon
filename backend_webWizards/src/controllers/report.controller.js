@@ -37,13 +37,15 @@ const createReport = asyncHandler(async function (req, res) {
 
     const pdfFileLocalPath = req?.file?.path
 
+    console.log(pdfFileLocalPath);
+
     if (!pdfFileLocalPath) {
         throw new ApiError(409, "pdf file is required")
     }
 
 
     const pdfFile = await uploadOnCloudinary(pdfFileLocalPath)
-
+    console.log(pdfFile);
 
     if (!pdfFile) {
         throw new ApiError(406, "failed to upload pdf on cloudinary")
