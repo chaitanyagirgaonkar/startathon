@@ -33,7 +33,7 @@ const createReport = asyncHandler(async function (req, res) {
     if (!reportType) {
         throw new ApiError( 402, "report Type is required")
     }
-
+    console.log(req.file);
 
     const pdfFileLocalPath = req?.file?.path
 
