@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { IoMdClose } from "react-icons/io";
 import useAuth from '../../hooks/useAuth';
 import axios from "axios"
+// import axios from "../../api/axios.js"
 import toast, { Toaster } from 'react-hot-toast';
 
 function AddReport({ onPdfAdded }) {
@@ -10,7 +11,6 @@ function AddReport({ onPdfAdded }) {
     const [description, setDescription] = useState("");
     const [reportDate, setReportDate] = useState("");
     const [pdfFile, setPdfFile] = useState(null);
-   
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -22,7 +22,9 @@ function AddReport({ onPdfAdded }) {
         try {
             const res = await axios.post("https://care-connect-jade.vercel.app/api/v1/report/create", formData,
                 {
-                    headers: { "Content-Type": "multipart/form-data" }
+                    headers: { "Content-Type": "multipart/form-data" },
+                    withCredentials: true
+
                 })
             console.log(res)
             alert("Report Added Successfully...!")

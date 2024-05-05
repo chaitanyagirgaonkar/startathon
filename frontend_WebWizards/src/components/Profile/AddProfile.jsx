@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { IoMdClose } from "react-icons/io";
-import axios from "axios"
+// import axios from "axios"
+import axios from "../../api/axios.js"
 import toast, { Toaster } from 'react-hot-toast';
 import useAuth from '../../hooks/useAuth';
 

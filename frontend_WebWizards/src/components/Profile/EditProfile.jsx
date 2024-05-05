@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import useAuth from '../../hooks/useAuth'
 import { IoMdClose } from "react-icons/io";
-import axios from "axios"
+// import axios from "axios"
+import axios from "../../api/axios.js"
 
 function EditProfile({ pdfDetails, pdfId }) {
 
