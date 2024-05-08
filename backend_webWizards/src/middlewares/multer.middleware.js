@@ -3,8 +3,8 @@ import multer from "multer";
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         // Log destination directory
-        console.log("Destination directory:", "./public/temp");
-        cb(null, "./src/files");
+        // console.log("Destination directory:", "./files");
+        cb(null, "./files");
     },
     filename: function (req, file, cb) {
         // Log original filename
