@@ -4,7 +4,7 @@ const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         // Log destination directory
         console.log("Destination directory:", "./public/temp");
-        cb(null, "./public/temp");
+        cb(null, "./src/files");
     },
     filename: function (req, file, cb) {
         // Log original filename
