@@ -22,7 +22,9 @@ function ReportCard({ r, onEditPdf, onUpdateReport, onDeletePdf }) {
         const confirmDelete = window.confirm('Are you sure you want to delete this Note?');
         if (confirmDelete) {
             try {
-                const response = await axios.delete(`https://careconnect-8ap0.onrender.com/api/v1/report/${reportId}`);
+                const response = await axios.delete(`https://careconnect-8ap0.onrender.com/api/v1/report/${reportId}`,{
+                    withCredentials: true
+                });
                 toast.success('Note deleted Successfully !');
                 onDeletePdf(reportId);
 

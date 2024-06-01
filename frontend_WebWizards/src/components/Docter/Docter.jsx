@@ -23,7 +23,9 @@ const Docter = () => {
   };
   useEffect(() => {
 
-    axios.get(`https://careconnect-8ap0.onrender.com/api/v1/report/user/${userId}`)
+    axios.get(`https://careconnect-8ap0.onrender.com/api/v1/report/user/${userId}`,{
+      withCredentials: true
+  })
       .then((response) => {
         setData(response.data.data.userBelongingToReport[0])
         console.log(response.data.data.patientReport);

@@ -20,6 +20,7 @@ function EditReport({ reportDetails, onCancelEdit, onUpdateReport }) {
         try {
             const res = await axios.patch(`https://careconnect-8ap0.onrender.com/api/v1/report/${reportDetails?._id}`, formData, {
                 headers: { 'Content-Type': 'multipart/form-data' },
+                withCredentials : true,
             });
             console.log(res.data.data);
             alert("report Edit Successfully...!")

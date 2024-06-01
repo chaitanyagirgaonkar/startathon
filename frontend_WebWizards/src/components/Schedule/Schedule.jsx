@@ -11,7 +11,9 @@ function Schedule() {
     }
 
     useEffect(() => {
-        axios.get(`https://careconnect-8ap0.onrender.com/api/v1/schedule/getUserSchedule`)
+        axios.get(`https://careconnect-8ap0.onrender.com/api/v1/schedule/getUserSchedule`,{
+            withCredentials: true
+        })
             .then((res) => {
                 console.log(res.data.data)
                 setData(res.data.data)

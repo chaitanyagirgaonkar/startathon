@@ -35,6 +35,8 @@ function AddSchedule({ onHandleSchedule , onPdfAdded}) {
             medicine,
             scheduleType :cronResult,
             timing
+        },{
+            withCredentials: true
         })
             .then((res) => {
                 console.log(res)
