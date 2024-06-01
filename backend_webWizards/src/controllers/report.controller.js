@@ -60,7 +60,7 @@ const createReport = asyncHandler(async function (req, res) {
         owner: req?.user?._id,
         pdfFile: {
             public_id: pdfFile?.public_id,
-            url: pdfFile?.url,
+            url: pdfFile?.secure_url,
         }
     })
 
