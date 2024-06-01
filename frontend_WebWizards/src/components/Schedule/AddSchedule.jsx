@@ -30,7 +30,7 @@ function AddSchedule({ onHandleSchedule , onPdfAdded}) {
         console.log(timing)
         convertToCron()
         console.log(cronResult)
-        axios.post("https://care-connect-jade.vercel.app/api/v1/schedule/", {
+        axios.post("https://careconnect-8ap0.onrender.com/api/v1/schedule/", {
             disease,
             medicine,
             scheduleType :cronResult,

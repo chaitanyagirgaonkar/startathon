@@ -6,7 +6,7 @@ function ScheduleCard({d}) {
 
     const handleAlarm =()=>{
         console.log("jdsijf");
-        axios.post(`https://care-connect-jade.vercel.app/api/v1/schedule/${d._id}`)
+        axios.post(`https://careconnect-8ap0.onrender.com/api/v1/schedule/${d._id}`)
         .then(
             (res)=>{
                 console.log("jhd ")

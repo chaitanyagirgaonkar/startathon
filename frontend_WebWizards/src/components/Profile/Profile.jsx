@@ -23,7 +23,7 @@ function Profile() {
 
     useEffect(() => {
   
-        axiosPrivate.get("https://care-connect-jade.vercel.app/api/v1/profile/getProfile",{
+        axiosPrivate.get("https://careconnect-8ap0.onrender.com/api/v1/profile/getProfile",{
             headers: { "Content-Type": "application/json" },
     withCredentials: true
         })

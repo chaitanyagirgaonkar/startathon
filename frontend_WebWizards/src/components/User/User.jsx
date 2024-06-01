@@ -15,7 +15,7 @@ function User() {
     const logout = useLogout()
 
     useEffect(() => {
-        axiosPrivate.get('https://care-connect-jade.vercel.app/api/v1/user/getCurrent-user')
+        axiosPrivate.get('https://careconnect-8ap0.onrender.com/api/v1/user/getCurrent-user')
             .then((res) => {
 
                 // console.log(res.data.data)

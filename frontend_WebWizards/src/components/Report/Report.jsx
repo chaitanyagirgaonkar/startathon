@@ -25,7 +25,7 @@ function Report() {
         const userId = decoded?._id 
 
     useEffect(() => {
-        axios.get("https://care-connect-jade.vercel.app/api/v1/report/getAllreports")
+        axios.get("https://careconnect-8ap0.onrender.com/api/v1/report/getAllreports")
             .then((res) => {
                 console.log(res.data.data);
                 setReport(res.data.data);

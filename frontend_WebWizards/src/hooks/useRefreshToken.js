@@ -6,7 +6,7 @@ function useRefreshToken() {
     const { setAuth } = useAuth()
 
     const refresh = async () => {
-        const response = await axios.post("https://care-connect-jade.vercel.app/api/v1/user/refresh-token", {
+        const response = await axios.post("https://careconnect-8ap0.onrender.com/api/v1/user/refresh-token", {
             withCredentials: true,
             headers: { "Content-Type": "application/json" },
         })

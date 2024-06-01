@@ -17,7 +17,7 @@ const SendEmail = ( { userId,reportId , handleSendEmail} ) => {
     if(userId){
       try {
         console.log("user id : ",userId)
-        const response = await axios.post(`https://care-connect-jade.vercel.app/api/v1/report/email/${userId}`, { to : email  }) 
+        const response = await axios.post(`https://careconnect-8ap0.onrender.com/api/v1/report/email/${userId}`, { to : email  }) 
         console.log("tbhbhh j")
         setSendEmail(prev => !prev)
 
@@ -29,7 +29,7 @@ const SendEmail = ( { userId,reportId , handleSendEmail} ) => {
     }else if(reportId){
       try {
         console.log("report id : " ,reportId)
-        const response = await axios.post(`https://care-connect-jade.vercel.app/api/v1/report/email/report/${reportId}`, { to : email}) 
+        const response = await axios.post(`https://careconnect-8ap0.onrender.com/api/v1/report/email/report/${reportId}`, { to : email}) 
 
         setSendEmail(prev => !prev)
 

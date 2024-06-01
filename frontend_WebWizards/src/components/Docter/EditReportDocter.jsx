@@ -17,7 +17,7 @@ function EditReportDocter({ reportDetails, onCancelEdit, onUpdateReport }) {
             formData.append('reportType', reportDate);
     
             try {
-                const res = await axios.patch(`https://care-connect-jade.vercel.app/api/v1/report/${reportDetails?._id}`, formData, {
+                const res = await axios.patch(`https://careconnect-8ap0.onrender.com/api/v1/report/${reportDetails?._id}`, formData, {
                     headers: { 'Content-Type': 'multipart/form-data' },
                 });
                 console.log(res.data.data);
